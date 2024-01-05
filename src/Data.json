@@ -1,0 +1,86 @@
+[
+    {
+        "id": 1,
+        "name": "Vegan Leather Chair",
+        "price": 50.00,
+        "category":"Office",
+        "img":"../src/assets/img-1.png"
+    },
+    {
+        "id": 2,
+        "name": "Borrego Small Round Ottoman",
+        "price": 51.00,
+        "category":"Living Room",
+        "img":"../src/assets/img-2.png"
+    },
+    {
+        "id": 3,
+        "name": "Leather Deep-Seat Swivel Chair",
+        "price": 52.00,
+        "category":"Dining",
+        "img":"../src/assets/img-3.png"
+    },
+    {
+        "id": 4,
+        "name": "Grasscloth Nightstand",
+        "price": 53.00,
+        "category":"Bed Room",
+        "img":"../src/assets/img-4.png"
+    },
+    {
+        "id": 5,
+        "name": "2-Drawer Nightstand",
+        "price": 54.00,
+        "category":"Outdoor",
+        "img":"../src/assets/img-5.png"
+    },
+    {
+        "id": 6,
+        "name": "Dining Chair",
+        "price": 55.00,
+        "category":"Storage",
+        "img":"../src/assets/img-6.png"
+    },
+    {
+        "id": 7,
+        "name": "Rivera Sofa",
+        "price": 56.00,
+        "category":"Office",
+        "img":"../src/assets/img-7.png"
+    },
+    {
+        "id": 8,
+        "name": "Natural Oak Wood Storage",
+        "price": 57.00,
+        "category":"Living Room",
+        "img":"../src/assets/img-8.png"
+    },
+    {
+        "id": 9,
+        "name": "Leather Deep-Seat Sofa",
+        "price": 58.00,
+        "category":"Dining",
+        "img":"../src/assets/img-9.png"
+    },
+    {
+        "id": 10,
+        "name": "Wood Dining Table",
+        "price": 59.00,
+        "category":"Bed Room",
+        "img":"../src/assets/img-10.png"
+    },
+    {
+        "id": 11,
+        "name": "Lakin White Oak Sideboard",
+        "price": 60.00,
+        "category":"Outdoor",
+        "img":"../src/assets/img-11.png"
+    },
+    {
+        "id": 12,
+        "name": "Bisou Accent Chair",
+        "price": 61.00,
+        "category":"Storage",
+        "img":"../src/assets/img-12.png"
+    }
+]

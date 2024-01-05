@@ -1,0 +1,39 @@
+nav{
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    z-index: 2;
+    position: relative;
+}
+nav h2{
+    flex: 1;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 0 20px;
+    margin-right: 60px;
+    a{
+        text-decoration: none;
+        padding-bottom: 4px;
+        &:hover{
+            border-bottom: 2px solid #EFF422;
+            padding-bottom: 2px;
+        }
+    }
+}
+.active__nav-link{
+    border-bottom: 2px solid #EFF422;
+    padding-bottom: 2px;
+}
+
+nav button{
+    padding: 10px 30px;
+    background-color: #EFF422;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 800;
+    border-radius: 20px;
+}
