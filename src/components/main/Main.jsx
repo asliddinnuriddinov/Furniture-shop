@@ -39,7 +39,7 @@ const Main = () => {
     }
 
     function displayImage(ind){
-        switch(ind){
+        switch(ind-1){
             case 0:
                 return img1
                 case 1:
@@ -84,7 +84,7 @@ const Main = () => {
             <div className="products">
                 {filteredProducts.map((product, index) => (
                     <div onClick={e=>navigate(`/product-view/${product.id}`)} key={index} className="product__item">
-                        <img src={displayImage(index)} alt={product.name} />
+                        <img src={displayImage(product.id)} alt={product.name} />
                         <h4>{product.name}</h4>
                         <strong>$ {product.price}</strong>
                     </div>
