@@ -15,6 +15,8 @@ import img9 from "../../assets/img-9.png"
 import img10 from "../../assets/img-1.png"
 import img11 from "../../assets/img-11.png"
 import img12 from "../../assets/img-12.png"
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Main = () => {
     const [allCategory, setAllCategory] = useState([]);
@@ -25,6 +27,26 @@ const Main = () => {
     useEffect(() => {
         const uniqueCategories = [...new Set(data.map(item => item.category))];
         setAllCategory(uniqueCategories);
+        AOS.init({
+            // Global settings:
+            disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+            startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+            initClassName: 'aos-init', // class applied after initialization
+            animatedClassName: 'aos-animate', // class applied on animation
+            useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+            disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+            debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+            throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+      
+            // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+            offset: 120, // offset (in px) from the original trigger point
+            delay: 0, // values from 0 to 3000, with step 50ms
+            duration: 400, // values from 0 to 3000, with step 50ms
+            easing: 'ease', // default easing for AOS animations
+            once: false, // whether animation should happen only once - while scrolling down
+            mirror: false, // whether elements should animate out while scrolling past them
+            anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+          });
     }, []);
 
     const filteredProducts = useMemo(() => {
@@ -69,7 +91,7 @@ const Main = () => {
 
     return (
         <Container>
-            <ul className='categories'>
+            <ul data-aos='fade-down' data-aos-duration={800} className='categories'>
                 <li onClick={() => filterCategory('all')} className={selectedCategory === 'all' ? 'activeCategory' : ''}>All Products</li>
                 {allCategory.map((category, index) => (
                     <li
@@ -83,7 +105,7 @@ const Main = () => {
             </ul>
             <div className="products">
                 {filteredProducts.map((product, index) => (
-                    <div onClick={e=>navigate(`/product-view/${product.id}`)} key={index} className="product__item">
+                    <div  data-aos="flip-up" data-aos-duration={800} onClick={e=>navigate(`/product-view/${product.id}`)} key={index} className="product__item">
                         <img src={displayImage(product.id)} alt={product.name} />
                         <h4>{product.name}</h4>
                         <strong>$ {product.price}</strong>
